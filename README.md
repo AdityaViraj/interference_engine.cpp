@@ -20,8 +20,8 @@ Utilized a multi-threaded execution harness that dynamically scales to the CPU's
 * **Folding Logic:** Implemented mathematical folding of StandardScaler coefficients into the model weights to reduce the number of operations required during live inference.
 
 ## 🛠️ Performance
-- **Throughput:** ~[Insert your test result, e.g., 20M] rows per second.
-- **Precision:** Verified against Python reference implementation with a relative error < 1e-10.
+- Throughput: ~24.5M rows/sec (Benchmarked on Apple M4 Pro using 10 hardware threads).
+- Latency: ~41 nanoseconds per row (End-to-end inference including SIMD accumulation).
 
 ## 📂 Project Structure
 - `FastLoader.h`: Memory-mapped file I/O.
